@@ -1,0 +1,48 @@
+// Import classes:
+2
+//import com.cloudmersive.client.invoker.ApiClient;
+3
+//import com.cloudmersive.client.invoker.ApiException;
+4
+//import com.cloudmersive.client.invoker.Configuration;
+5
+//import com.cloudmersive.client.invoker.auth.*;
+6
+//import com.cloudmersive.client.ViewerToolsApi;
+7
+8
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+9
+10
+// Configure API key authorization: Apikey
+11
+ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+12
+Apikey.setApiKey("YOUR API KEY");
+13
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+14
+//Apikey.setApiKeyPrefix("Token");
+15
+16
+ViewerToolsApi apiInstance = new ViewerToolsApi();
+17
+File inputFile = new File("/path/to/inputfile"); // File | Input file to perform the operation on.
+18
+Integer width = 56; // Integer | Optional; width of the output viewer in pixels
+19
+Integer height = 56; // Integer | Optional; height of the output viewer in pixels
+20
+try {
+21
+ViewerResponse result = apiInstance.viewerToolsCreateSimple(inputFile, width, height);
+22
+System.out.println(result);
+23
+} catch (ApiException e) {
+24
+System.err.println("Exception when calling ViewerToolsApi#viewerToolsCreateSimple");
+25
+e.printStackTrace();
+26
+}

@@ -1,0 +1,13 @@
+<dependencies>
+    2
+    <dependency>
+        3
+        <groupId>com.github.Cloudmersive</groupId>
+        4
+        <artifactId>Cloudmersive.APIClient.Java</artifactId>
+        5
+        <version>v3.90</version>
+        6
+    </dependency>
+    7
+</dependencies>
